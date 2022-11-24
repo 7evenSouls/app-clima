@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargando...</title>
+    <link rel="stylesheet" href="css/panel.css">
+    <script src="https://kit.fontawesome.com/2eb80ea257.js" crossorigin="anonymous"></script>
+    <script src="js/panel.js" defer></script>
+
+    <link rel="shortcut icon" href="img/icon.svg" type="image/x-icon">
+</head>
+<body>
+    <section id="info_container">
+        <a href="index.html" id="link_back">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </a>
+        <div id="text_info">
+            <div id="datetime">
+                
+            </div>
+            <h2 id="title">
+
+            </h2>
+            <div id="station_location">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                <span></span>
+            </div>
+            <div id="property_container">
+                <div id="temp_container" style="display: none;">
+                    <div>
+                        <div class="property_name_container">
+                            <i class="fas fa-thermometer-full" aria-hidden="true"></i>
+                            <span class="property_name">
+                                Temperatura
+                            </span>
+                        </div>
+                        <div class="property_value_container">
+                            <div class="property_value" id="temp">
+
+                            </div>
+                            <div class="property_details">
+                                <div class="property_unit">
+                                    °C
+                                </div>
+                                <div class="property_dec" id="temp_dec">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="minmax_container_row">
+                            <div class="minmax_container">
+                                <div class="minmax_title">
+                                    <i class="fas fa-caret-up" aria-hidden="true"></i>
+                                    Máximo
+                                </div>
+                                <div class="minmax_value" id="max_temp">
+
+                                </div>
+                            </div>
+                            <div class="minmax_container">
+                                <div class="minmax_title">
+                                    <i class="fas fa-caret-down" aria-hidden="true"></i>
+                                    Mínimo
+                                </div>
+                                <div class="minmax_value" id="min_temp">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="property_name_container">
+                            <i class="fas fa-child" aria-hidden="true"></i>
+                            <span class="property_name">
+                                Sensación
+                            </span>
+                        </div>
+                        <div class="property_value_container">
+                            <div class="property_value" id="sens">
+
+                            </div>
+                            <div class="property_details">
+                                <div class="property_unit">
+                                    °C
+                                </div>
+                                <div class="property_dec" id="sens_dec">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="minmax_container_row">
+                            <div class="minmax_container">
+                                <div class="minmax_title">
+                                    <i class="fas fa-caret-up" aria-hidden="true"></i>
+                                    Máximo
+                                </div>
+                                <div class="minmax_value" id="max_sens">
+
+                                </div>
+                            </div>
+                            <div class="minmax_container">
+                                <div class="minmax_title">
+                                    <i class="fas fa-caret-down" aria-hidden="true"></i>
+                                    Mínimo
+                                </div>
+                                <div class="minmax_value" id="min_sens">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="fire_container" style="display: none;">
+                    <div class="property_name_container">
+                        <i class="fas fa-fire" aria-hidden="true"></i>
+                        <span class="property_name">
+                            Fuego
+                        </span>
+                    </div>
+                    <div id="fire_properties_container">
+                        <div class="fire_property">
+                            <div class="fire_property_title">
+                                FFMC
+                            </div>
+                            <div class="fire_property_value" id="ffmc">
+
+                            </div>
+                        </div>
+                        <div class="fire_property">
+                            <div class="fire_property_title">
+                                DMC
+                            </div>
+                            <div class="fire_property_value" id="dmc">
+
+                            </div>
+                        </div>
+                        <div class="fire_property">
+                            <div class="fire_property_title">
+                                DC
+                            </div>
+                            <div class="fire_property_value" id="dc">
+
+                            </div>
+                        </div>
+                        <div class="fire_property">
+                            <div class="fire_property_title">
+                                ISI
+                            </div>
+                            <div class="fire_property_value" id="isi">
+
+                            </div>
+                        </div>
+                        <div class="fire_property">
+                            <div class="fire_property_title">
+                                BUI
+                            </div>
+                            <div class="fire_property_value" id="bui">
+
+                            </div>
+                        </div>
+                        <div class="fire_property">
+                            <div class="fire_property_title">
+                                FWI
+                            </div>
+                            <div class="fire_property_value" id="fwi">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="hum_container" style="display: none;">
+                    <div class="property_name_container">
+                        <i class="fas fa-tint" aria-hidden="true"></i>
+                        <span class="property_name">
+                            Humedad
+                        </span>
+                    </div>
+                    <div class="property_value_container">
+                        <div class="property_value" id="hum">
+
+                        </div>
+                        <div class="property_details">
+                            <div class="property_unit">
+                                %
+                            </div>
+                            <div class="property_dec" id="hum_dec">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="press_container" style="display: none;">
+                    <div class="property_name_container">
+                        <i class="fas fa-circle-down" aria-hidden="true"></i>
+                        <span class="property_name">
+                            Presión
+                        </span>
+                    </div>
+                    <div class="property_value_container">
+                        <div class="property_value" id="press">
+
+                        </div>
+                        <div class="property_details">
+                            <div class="property_unit">
+                                hPa
+                            </div>
+                            <div class="property_dec" id="press_dec">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="wind_container">
+                    <div>
+                        <div class="property_name_container">
+                            <i class="fas fa-wind" aria-hidden="true"></i>
+                            <span class="property_name">
+                                Viento
+                            </span>
+                        </div>
+                        <div class="property_value_container">
+                            <div class="property_value" id="wind">
+
+                            </div>
+                            <div class="property_details">
+                                <div class="property_unit">
+                                    Km/H
+                                </div>
+                                <div class="property_dec" id="wind_dec">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="minmax_container_row">
+                            <div class="minmax_container">
+                                <div class="minmax_title">
+                                    <i class="fas fa-caret-up" aria-hidden="true"></i>
+                                    Máximo
+                                </div>
+                                <div class="minmax_value" id="max_wind">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="property_name_container">
+                            <i class="fas fa-compass" aria-hidden="true"></i>
+                            <span class="property_name">
+                                Dirección
+                            </span>
+                        </div>
+                        <div id="dir">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div id="graph">
+
+        </div>
+    </section>
+    <section id="control_container">
+        <div id="btn_temp" class="control_button">
+            <i class="fas fa-thermometer-full" aria-hidden="true"></i>
+            <div id="btemp">
+
+            </div>
+        </div>
+        <div id="btn_fire" class="control_button">
+            <i class="fas fa-fire" aria-hidden="true"></i>
+            <div id="bfire">
+                Muy bajo
+            </div>
+        </div>
+        <div id="btn_hum" class="control_button">
+            <i class="fas fa-tint" aria-hidden="true"></i>
+            <div id="bhum">
+
+            </div>
+        </div>
+        <div id="btn_press" class="control_button">
+            <i class="fas fa-arrow-circle-down" aria-hidden="true"></i>
+            <div id="bpress">
+
+            </div>
+        </div>
+        <div id="btn_wind" class="control_button">
+            <i class="fas fa-wind" aria-hidden="true"></i>
+            <div id="bwind">
+
+            </div>
+            <div id="bdir">
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>

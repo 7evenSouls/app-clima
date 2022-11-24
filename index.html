@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Listado de estaciones</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://kit.fontawesome.com/2eb80ea257.js" crossorigin="anonymous"></script>
+
+	<link rel="shortcut icon" href="img/icon.svg" type="image/x-icon">
+</head>
+<body>
+	<h1>Estaciones</h1>
+	<template id="tpl__estacion">
+		<a class="card">
+			<h3 class="card__title">
+				Apodo
+			</h3>
+			<div class="card__location_container">
+				<i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+				<p class="card__location">
+					Ubicación
+				</p>
+			</div>
+			<div class="card__views_container">
+				<i class="fa-solid fa-tower-observation"></i>
+				<p class="card__views">
+					1
+				</p>
+			</div>
+		</a>
+	</template>
+
+	<div id="listado">
+		
+	</div>
+
+
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

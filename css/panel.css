@@ -1,0 +1,149 @@
+@import url(style.css);
+
+body {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+section {
+    flex: 1;
+    position: relative;
+}
+
+
+
+#info_container {
+    margin: 20px;
+    font-size: larger;
+
+    text-decoration: none;
+	border: 4px solid white;
+	padding: 10px;
+	border-radius: 10px;
+
+	transition-duration: 0.2s;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#link_back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 4px solid white;
+	padding: 10px;
+	border-radius: 10px;
+    margin: 10px;
+
+    transition-duration: 0.2s;
+}
+
+#link_back:hover {
+	transform: translateY(-5px);
+	cursor: pointer;
+}
+
+#text_info {
+    flex: 1;
+}
+
+#datetime {
+    font-size: small;
+}
+
+#property_container {
+    margin-top: 1rem;
+}
+
+.property_value_container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.property_value {
+    font-size: 80px;
+}
+.property_details {
+    font-size: 30px;
+}
+.minmax_container_row {
+    display: flex;
+}
+.minmax_container {
+    flex: 1;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+#temp_container, #wind_container {
+    display: flex;
+    justify-content: space-around;
+}
+#temp_container > div, #wind_container > div {
+    flex: 1;
+}
+
+#fire_properties_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: small;
+    font-weight: bold;
+}
+.fire_property_value {
+    font-weight: bolder;
+}
+
+#graph {
+    flex: 1;
+}
+#btn_fire, #btn_press, #btn_wind {
+    display: none;
+}
+
+#control_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px;
+}
+
+.control_button {
+    font-size: larger;
+
+    text-decoration: none;
+	border: 4px solid white;
+	padding: 10px;
+	border-radius: 10px;
+
+	transition-duration: 0.2s;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.control_button:hover {
+	transform: translateY(-5px);
+	/* transform: scale(1.1, 1.1); */
+	cursor: pointer;
+}
+
+.control_button > i {
+    font-size: xx-large;
+}
+
+
+
+@media screen and (orientation: portrait) {
+    body {
+        flex-direction: column;
+    }
+}
